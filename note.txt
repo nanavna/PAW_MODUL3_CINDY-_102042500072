@@ -1,0 +1,42 @@
+Online Skill Test PT Empore
+
+Diperlukan sebuah aplikasi web peminjaman buku sederhana dengan menggunakan
+framework Laravel yang terdiri dari 2 jenis pengguna, yaitu Admin dan Anggota.
+Berikut merupakan fitur dari admin :
+- CRUD Master Buku yang memiliki atribut kode buku, judul buku, tahun terbit, penulis
+dan stok buku.
+- CRUD Anggota. Admin dapat membuat anggota baru
+- Pengajuan buku. Untuk melihat list pengajuan peminjaman buku oleh anggota, bisa
+melakukan approve atau reject. Saat di-approve, otomatis akan mengurangi stok
+buku.
+
+- Peminjaman buku. Bisa melihat list peminjaman buku (pengajuan buku yg di-
+approve), admin bisa mengubah status peminjaman saat buku sudah dikembalikan
+
+oleh anggota sehingga stok buku menjadi bertambah lagi.
+Berikut merupakan fitur dari anggota :
+- Anggota bisa melakukan pengajuan peminjaman buku, dengan memilih buku yang
+ingin dipinjam serta mengisi tanggal peminjaman dan pengembalian.
+- List peminjaman buku, berisi buku yang telah dan sedang dipinjam oleh anggota
+tersebut.
+Tugas :
+1. Membuat rancangan database / ERD yang mampu mengakomodasi semua fitur-fitur
+yang ada di atas.
+2. Membuat sebuah aplikasi web dengan fitur yang berwarna merah saja, dengan
+ketentuan seperti berikut :
+o Menggunakan web template admin (misalnya AdminLTE dll)
+o Multiauth Admin dan Anggota menggunakan Guard
+o List data ditampilkan berupa DataTables serverside (contoh Yajra datatables)
+o Menggunakan Eloquent ORM.
+o Mengimplementasikan jQuery AJAX dalam aplikasi (tidak harus semuanya)
+3. Membuat sebuah API sederhana dengan kembalian JSON seperti di bawah:
+a. GET /api/books
+Mengambil data semua buku
+b. GET /api/books/{code}
+Mengambil data buku sesuai dengan kode
+c. POST /api/books
+Membuat buku baru
+d. PUT /api/books/{code}
+Mengubah data buku sesuai dengan kode
+e. DELETE /api/books/{code}
+Menghapus data buku sesuai dengan kode
